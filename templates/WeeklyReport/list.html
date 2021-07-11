@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看周报</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/layui-v2.6.8/layui/css/layui.css' %}">
+</head>
+<body>
+<div class="layui-bg-gray" style="padding: 30px;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header">周报系统</div>
+                <div class="layui-card-body" style="color: red">
+                    周报已提交!<br>
+                </div>
+                <a href="{% url 'admin:index' %}" style="padding: 15px">查看周报</a>
+            </div>
+        </div>
+
+</body>
+</html>

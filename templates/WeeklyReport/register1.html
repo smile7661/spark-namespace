@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/layui-v2.6.8/layui/css/layui.css' %}">
+</head>
+<body>
+<h1>注册</h1>
+<a href="{% url 'WeeklyReport:主页' %}">回到主页</a>
+
+{%  if register_form.errors %}
+<p>{{ register_form.errors }}</p>
+{% endif %}
+
+<form class="layui-form" action="" method="post">
+    {% csrf_token  %}
+    {{ register_form.as_p }}
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="demo1" >注册</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>
